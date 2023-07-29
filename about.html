@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #0d5ea0;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      margin-right: 10px;
+    }
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    .nav-links li {
+      margin-right: 20px;
+    }
+    .nav-links li:last-child {
+      margin-right: 0;
+    }
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .footer {
+      background-color: #0d5ea0;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .sponsor-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .sponsor-item {
+      width: 100px;
+      height: 100px;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section>
+      <h1>About Us</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis lorem ut felis aliquam, id dictum magna
+        euismod. Nullam nec lectus eu turpis feugiat eleifend. Sed fermentum venenatis felis vel sollicitudin.
+      </p>
+      <p>
+        Phasellus tincidunt elit non libero euismod, eu scelerisque odio tincidunt. Etiam vitae leo id erat tristique
+        bibendum. Suspendisse sed arcu id orci tincidunt cursus. Fusce fringilla consequat hendrerit. Sed feugiat, odio
+        ut ultrices venenatis, mi sapien consectetur nulla, a rhoncus ligula metus sit amet felis.
+      </p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Your College Name. All rights reserved.</p>
+    <div class="sponsor-list">
+      <div class="sponsor-item"></div>
+      <div class="sponsor-item"></div>
+      <div class="sponsor-item"></div>
+      <!-- Add more sponsor items as needed -->
+    </div>
+  </footer>
+</body>
+</html>

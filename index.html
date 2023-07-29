@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #408ab8, #829356);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .header {
+      background-color: #0d5ea0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      margin-right: 10px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    .nav-links li {
+      margin-right: 20px;
+    }
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      background: #f1f1f1;
+      margin-top: 4rem;
+      padding: 2rem;
+      border: 1px solid #0d5ea0;
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 38%;
+    }
+    #box1 {
+      width: 100%;
+      margin: 4px;
+      margin-left: -5px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 5px;
+    }
+    #box3 {
+      width: 100%;
+      margin: 4px;
+      margin-left: -5px;
+      height: 40px;
+      border-radius: 5px;
+      color: #00e1ff;
+      background-color: #6d6b6b;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    #box3:hover {
+      background-color: #4caf50;
+      color: white;
+    }
+    #output {
+      background: #f1f1f1;
+      margin: 3rem;
+      padding: 2rem;
+      border: 1px solid #0d5ea0;
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 38%;
+    }
+    h4 {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: green;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .footer {
+      background-color: #0d5ea0;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+    .sponsor-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .sponsor-item {
+      width: 100px;
+      height: 100px;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    .drop-box {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .drop-box select {
+      padding: 8px;
+      border-radius: 5px;
+      font-size: 14px;
+      background-color: #fff;
+      border: 1px solid #0d5ea0;
+      color: #0d5ea0;
+      appearance: none;
+    }
+    .drop-box::before {
+      content: "\f078";
+      font-family: FontAwesome;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #0d5ea0;
+      pointer-events: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <section>
+    <div class="container">
+      <div class="drop-box">
+        <select id="classSelector">
+          <option value="11">Class 11</option>
+          <option value="12">Class 12</option>
+        </select>
+      </div>
+      <input type="text" id="box1" placeholder="Enter your symbol number" />
+      <input type="button" value="Show Result" id="box3" onclick="showData()" />
+    </div>
+  </section>
+  <section>
+    <div id="output"></div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2023 Your College Name. All rights reserved.</p>
+    <div class="sponsor-list">
+      <div class="sponsor-item"></div>
+      <div class="sponsor-item"></div>
+      <div class="sponsor-item"></div>
+      <!-- Add more sponsor items as needed -->
+    </div>
+  </footer>
+
+  <script>
+    function showData() {
+      let classNumber = document.getElementById("classSelector").value;
+      let symbolNumber = document.getElementById("box1").value.trim();
+
+      if (symbolNumber.length < 5) {
+        alert("Please enter a symbol number with at least 5 digits.");
+        return;
+      }
+
+      // Assume 'data' is an object containing uploaded data for symbol numbers
+      // Replace this with the actual data source or API call to fetch data.
+      // For example, if 'data' is an array of objects containing symbol numbers and corresponding data:
+      let data = [
+        { class: "11", symbol: "12345", name: "Irfan Ansari", score: 95 },
+        { class: "12", symbol: "67890", name: "Nibesh Mehta", score: 92 },
+        { class: "11", symbol: "24680", name: "Michael Johnson", score: 78 },
+        { class: "12", symbol: "13579", name: "Emily Brown", score: 88 },
+        // Add more data here
+      ];
+
+      let foundData = data.find(item => item.class === classNumber && item.symbol === symbolNumber);
+
+      if (foundData) {
+        document.getElementById("output").innerHTML = `
+          <h4>Student Information</h4>
+          <p><strong>Name:</strong> ${foundData.name}</p>
+          <p><strong>Class:</strong> ${foundData.class}</p>
+          <p><strong>Symbol Number:</strong> ${foundData.symbol}</p>
+          <p><strong>Score:</strong> ${foundData.score}</p>
+        `;
+      } else {
+        document.getElementById("output").innerHTML = "<h4>Data not found for the entered symbol number.</h4>";
+      }
+    }
+    
+  </script>
+</body>
+</html>
